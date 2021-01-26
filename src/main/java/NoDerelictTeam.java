@@ -2,6 +2,7 @@ import arc.util.Timer;
 import mindustry.Vars;
 import mindustry.game.Team;
 import mindustry.game.Teams;
+import mindustry.gen.Call;
 import mindustry.gen.Groups;
 import mindustry.gen.Player;
 import mindustry.mod.Plugin;
@@ -25,7 +26,7 @@ public class NoDerelictTeam extends Plugin {
                 if (player.team() == Team.derelict) {
                     players.add(player);
                 } else {
-                    int count = amount.get(player.team());
+                    int count = amount.getOrDefault(player.team(), 0);
                     amount.put(player.team(), count + 1);
                 }
             });
