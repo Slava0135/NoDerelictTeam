@@ -1,0 +1,7 @@
+{
+  "name": "NoDerelictTeam",
+  "description": "Doesn't allow players to join Derelict team",
+  "author": "Slava0135",
+  "main": "NoDerelictTeam",
+  "version": "1.0"
+}
