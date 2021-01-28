@@ -39,13 +39,13 @@ public class NoDerelictTeam extends Plugin {
                 for (Player player : players) {
 
                     Map.Entry<Team, Integer> lastEntry = list.get(0);
-                    int index = 0;
+                    int index = -1;
                     for (Map.Entry<Team, Integer> entry : list) {
+                        index++;
                         if (lastEntry.getValue() < entry.getValue()) {
                             break;
                         }
                         lastEntry = entry;
-                        index++;
                     }
 
                     Map.Entry<Team, Integer> newEntry = new AbstractMap.SimpleEntry<>(lastEntry.getKey(), lastEntry.getValue() + 1);
